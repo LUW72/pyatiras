@@ -15,10 +15,6 @@ public class szamjegyek
         System.out.printf("2,3,4 jegyekből a számok");
         boolean ism = scn.nextLine()  == "i";// ? true : false; // = feltétel ? haIgaz : haHamis -> bool
         String ki = ism ? " ismétlés nélkül\n" : " ismétléssel\n";
-        /*if (ism)
-        {
-            ki = " ismétléssel\n";
-        }*/
         
         System.out.println(ki);
         // feladat elkészítése:
