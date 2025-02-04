@@ -10,20 +10,17 @@ public class szamjegyek
     { 
         // feladat isnmertetése
         System.out.println("Ismétléssel vagy Nélküle? (i/n)");
-        String tipus = scn.nextLine();
+        // String tipus = scn.nextLine();
         
-        System.out.println("2,3,4 jegyekből a számok\n");
-        boolean ism;
-        if (tipus == "i")
+        System.out.printf("2,3,4 jegyekből a számok");
+        boolean ism = scn.nextLine()  == "i";// ? true : false; // = feltétel ? haIgaz : haHamis -> bool
+        String ki = ism ? " ismétlés nélkül\n" : " ismétléssel\n";
+        /*if (ism)
         {
-            ism = true;
-            System.out.println(" ismétléssel");
-        }
-        else
-        {
-            ism = false;
-            System.out.println(" ismétlés nélkül");
-        }
+            ki = " ismétléssel\n";
+        }*/
+        
+        System.out.println(ki);
         // feladat elkészítése:
         int db_ism = 0;
         int db_ism_nlk = 0;
@@ -51,11 +48,11 @@ public class szamjegyek
         // statisztika megjelenítése:
         if (ism)
         {
-            System.out.println("\nAz esetek száma ismétléssel:" + db_ism);
+            System.out.println("\nAz esetek száma ismétléssel: " + db_ism);
         }
         else 
         {
-            System.out.println("\nAz esetek száma ismétlés nélkül:" + db_ism_nlk);
+            System.out.println("\nAz esetek száma ismétlés nélkül: " + db_ism_nlk);
         }
     }
 }
